@@ -1,18 +1,35 @@
 // Navigation Styles here
 .nav-section {
     display: flex;
-    margin:0 auto; 
+    margin: 0 auto;
     justify-content: space-evenly;
     padding: 25px;
     align-items: baseline;
-    border-bottom:2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        @media @mobile {
+            margin: 0 auto;
+        }
+    }
     nav {
-        max-width:500px;
+        max-width: 500px;
+        @media @mobile {
+            margin: 0 auto;
+        }
         a {
+            margin: 0 auto;
             padding-left: 40px;
             text-decoration: none;
             font-size: 16px;
-            color:black;
+            color: black;
+            @media @mobile {
+                padding-left: 20px;
+            }
         }
     }
 }

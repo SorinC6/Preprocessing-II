@@ -1,7 +1,6 @@
 .home {
-
     @media @mobile {
-        max-width:90%;
+        max-width: 90%;
     }
     header {
         border-bottom: 2px dashed @navigation-border;
@@ -17,16 +16,35 @@
         margin: 30px 0;
         display: flex;
         flex-wrap: wrap;
+        @media @mobile {
+            display: flex;
+            flex-direction: column;
+        }
         justify-content: space-between;
         .text-content {
             width: 48%;
             padding-right: 1%;
+            @media @mobile {
+                width: 100%;
+                padding-right: 0%;
+            }
         }
         .img-content {
             width: 48%;
             padding-left: 1%;
+            @media @mobile {
+                width: 100%;
+                padding-left:0%;
+                display:flex;
+                justify-content: center;
+            }
             img {
                 border-radius: 10px;
+                @media @mobile {
+                    //margin-right: 30px;
+                    width:100%;
+                    
+                }
             }
         }
     }
@@ -36,6 +54,9 @@
         .text-content {
             padding-left: 1%;
             padding-right: 0;
+            @media @mobile {
+                margin-top: 20px;
+            }
         }
         .img-content {
             padding-right: 1%;
@@ -45,6 +66,9 @@
     .content-destination {
         width: 75%;
         margin: 0 auto 30px;
+        @media @mobile{
+            width:100%;
+        }
         img {
             border-radius: 10px;
         }
@@ -54,9 +78,19 @@
         border-top: 2px dashed @navigation-border;
         display: flex;
         justify-content: space-between;
+
+        @media @mobile{
+            display:flex;
+            flex-direction:column;
+        }
         .destination {
             width: 30%;
             margin-bottom: 30px;
+            @media @mobile{
+                width:70%;
+                margin:0 auto;
+                margin-bottom: 20px;
+            }
             .btn {
                 .btn-style(15px, 15px, 10px, center, 15px);
             }

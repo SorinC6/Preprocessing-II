@@ -1,1 +1,37 @@
 // Navigation Styles here
+.nav-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+    align-items: baseline;
+    border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        @media @mobile {
+            margin: 0 auto;
+            padding: 10px;
+        }
+    }
+    nav {
+        max-width: 500px;
+        margin-right: 20px;
+        @media @mobile {
+            margin: 0 auto;
+        }
+        a {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0 auto;
+            padding-left: 40px;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            @media @mobile {
+                padding: 10px 30px;
+            }
+        }
+    }
+}
